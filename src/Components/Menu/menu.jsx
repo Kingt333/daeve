@@ -46,8 +46,8 @@ const Services = () => {
           <div className="service-card">
             <div className="card-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=600&q=80"
-                alt="Food Delivery"
+                src="https://images.unsplash.com/photo-1539252554453-80ab65ce3586?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Classic Sandwiches"
               />
             </div>
             <div className="card-content">
@@ -60,8 +60,8 @@ const Services = () => {
           <div className="service-card">
             <div className="card-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1617196030421-5c6b7d1a5c6e?auto=format&fit=crop&w=600&q=80"
-                alt="Home Cleaning"
+                src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Savory Noodles"
               />
             </div>
             <div className="card-content">
@@ -74,8 +74,8 @@ const Services = () => {
           <div className="service-card">
             <div className="card-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1581091870620-1c6f7b9e4f1b?auto=format&fit=crop&w=600&q=80"
-                alt="Grocery Shopping"
+                src="https://images.unsplash.com/photo-1627042633145-b780d842ba45?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Comfort Pasta"
               />
             </div>
             <div className="card-content">
@@ -88,7 +88,7 @@ const Services = () => {
           <div className="service-card">
             <div className="card-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1600180758895-0b1c8f3e4f1b?auto=format&fit=crop&w=600&q=80"
+                src="https://images.unsplash.com/photo-1593504049359-74330189a345?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Package Delivery"
               />
             </div>

@@ -19,7 +19,7 @@ const Navbar = ({ theme, toggleTheme }) => {
       {/* Desktop Links */}
       <nav className="nav-links" aria-label="Main navigation">
         <a className="nav-link active" href="#">Home</a>
-        <a className="nav-link" href="#">Services</a>
+        <a className="nav-link" href="#">Menu</a>
         <a className="nav-link" href="#">About</a>
         <a className="nav-link" href="#">Contact</a>
       </nav>

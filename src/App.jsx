@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home-section/Home";
-import Services from "./Components/Services/services";
+import Menu from "./Components/Menu/menu";
 
 
 export default function App() {
@@ -27,7 +27,7 @@ export default function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Home />
-        <Services />
+        <Menu />
       </main>
     </>
   )
