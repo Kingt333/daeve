@@ -16,7 +16,7 @@ const Navbar = ({ theme, toggleTheme }) => {
         <span className="logo-text">Crispy</span>
       </div>
 
-      {/* Desktop Links */}
+      {/* Desktop Navigation Links */}
       <nav className="nav-links" aria-label="Main navigation">
         <a className="nav-link active" href="#">Home</a>
         <a className="nav-link" href="#">Menu</a>
@@ -26,15 +26,18 @@ const Navbar = ({ theme, toggleTheme }) => {
 
       {/* Action Controls */}
       <div className="nav-actions">
-        <label className="searchbar" aria-label="Search">
+        {/* Desktop-only Searchbar */}
+        <label className="searchbar desktop-only" aria-label="Search">
           <img src={searchIcon} alt="" className="search-icon" />
           <input type="text" placeholder="Search..." />
         </label>
 
-        <button type="button" className="order-now-button">
+        {/* Desktop-only Order Button */}
+        <button type="button" className="order-now-button desktop-only">
           Order Now
         </button>
 
+        {/* Theme Toggle Button (Stays visible in header) */}
         <button
           type="button"
           className="theme-button"
@@ -44,6 +47,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           <img src={isDark ? lightModeIcon : darkModeIcon} alt="" className="theme-icon" />
         </button>
 
+        {/* Mobile Hamburger Toggle */}
         <button
           className="menu-toggle"
           aria-label="Toggle navigation"
@@ -54,21 +58,24 @@ const Navbar = ({ theme, toggleTheme }) => {
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
+      {/* Mobile Dropdown Panel */}
       <nav className={`mobile-menu ${menuOpen ? 'open' : ''}`} aria-label="Mobile navigation">
-        <label className="mobile-searchbar searchbar" aria-label="Mobile search">
+        {/* Mobile Searchbar */}
+        <label className="searchbar mobile-searchbar" aria-label="Search">
           <img src={searchIcon} alt="" className="search-icon" />
           <input type="text" placeholder="Search..." />
         </label>
 
-        <button className="order-now-button mobile-order" onClick={() => setMenuOpen(false)}>
-          Order Now
-        </button>
-
+        {/* Navigation Links */}
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Home</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Services</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>About</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Contact</a>
+
+        {/* Mobile Order Button */}
+        <button type="button" className="order-now-button mobile-order-btn">
+          Order Now
+        </button>
       </nav>
     </header>
   )

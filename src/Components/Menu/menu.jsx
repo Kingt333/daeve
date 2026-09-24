@@ -93,9 +93,9 @@ const Services = () => {
               />
             </div>
             <div className="card-content">
-              <h3>Signature Burgers</h3>
-              <p>Juicy burgers grilled to order with house sauces, melty cheese, and hand-cut fries.</p>
-              <button className="order-now-button">Order Burger</button>
+              <h3>Pizza</h3>
+              <p>Delicious pizzas with a variety of toppings and sauces, baked to perfection. You'll love every bite!</p>
+              <button className="order-now-button">Order Pizza</button>
             </div>
           </div>
         </div>
