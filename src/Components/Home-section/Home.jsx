@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react'
 import './Home.css'
 
 // Import hero images
-import image1 from '../../assets/image.png'
-import image2 from '../../assets/nood.png'
-import image3 from '../../assets/pizza.png'
-import image4 from '../../assets/sandwich2.png'
+import image1 from '../../assets/hero.png'
+import image2 from '../../assets/noodles.jpeg'
+import image3 from '../../assets/pizza.jpeg'
+import image4 from '../../assets/sandwich.jpeg'
 
 const slides = [
   {
