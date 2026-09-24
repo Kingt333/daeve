@@ -159,3 +159,35 @@ html[data-theme="dark"] .service-card {
     font-size: 1.8rem;
   }
 }
+
+/* Large screens and wide monitors */
+@media (min-width: 1280px) {
+  .services-container { max-width: 1400px; }
+
+  .services-header {
+    align-items: center;
+    gap: 2.5rem;
+  }
+
+  /* Make the grid more spacious on wide screens */
+  .services-grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2.25rem;
+  }
+
+  .card-image-wrapper { height: 320px; }
+
+  .card-content h3 { font-size: 1.25rem; }
+  .card-content p { font-size: 0.98rem; }
+
+  /* CTA size increase for desktop */
+  .order-now-button { padding: 0.7rem 1.15rem; font-size: 0.98rem; }
+}
+
+/* Ultra-wide monitor adjustments */
+@media (min-width: 1700px) {
+  .services-container { max-width: 1600px; }
+  .services-page { padding-left: 6rem; padding-right: 6rem; }
+  .services-grid { gap: 2.75rem; }
+  .card-image-wrapper { height: 380px; }
+}
