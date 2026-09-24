@@ -18,10 +18,10 @@ const Navbar = ({ theme, toggleTheme }) => {
 
       {/* Desktop Navigation Links */}
       <nav className="nav-links" aria-label="Main navigation">
-        <a className="nav-link active" href="#">Home</a>
-        <a className="nav-link" href="#">Menu</a>
-        <a className="nav-link" href="#">About</a>
-        <a className="nav-link" href="#">Contact</a>
+        <a className="nav-link active" href="#home">Home</a>
+        <a className="nav-link" href="#menu">Menu</a>
+        <a className="nav-link" href="#about">About</a>
+        <a className="nav-link" href="#contact">Contact</a>
       </nav>
 
       {/* Action Controls */}
@@ -67,10 +67,10 @@ const Navbar = ({ theme, toggleTheme }) => {
         </label>
 
         {/* Navigation Links */}
-        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Home</a>
-        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Services</a>
-        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>About</a>
-        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Contact</a>
+        <a className="mobile-link" href="#home" onClick={() => setMenuOpen(false)}>Home</a>
+        <a className="mobile-link" href="#menu" onClick={() => setMenuOpen(false)}>Menu</a>
+        <a className="mobile-link" href="#about" onClick={() => setMenuOpen(false)}>About</a>
+        <a className="mobile-link" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
 
         {/* Mobile Order Button */}
         <button type="button" className="order-now-button mobile-order-btn">
