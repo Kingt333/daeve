@@ -19,8 +19,8 @@ const Navbar = ({ theme, toggleTheme }) => {
       {/* Desktop Links */}
       <nav className="nav-links" aria-label="Main navigation">
         <a className="nav-link active" href="#">Home</a>
-        <a className="nav-link" href="#">About</a>
         <a className="nav-link" href="#">Services</a>
+        <a className="nav-link" href="#">About</a>
         <a className="nav-link" href="#">Contact</a>
       </nav>
 
@@ -57,8 +57,8 @@ const Navbar = ({ theme, toggleTheme }) => {
       {/* Mobile Dropdown */}
       <nav className={`mobile-menu ${menuOpen ? 'open' : ''}`} aria-label="Mobile navigation">
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Home</a>
-        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>About</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Services</a>
+        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>About</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Contact</a>
       </nav>
     </header>
