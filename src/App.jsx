@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Navbar from "./Components/Navbar/Navbar";
 import Home from "./Components/Home-section/Home";
+import Services from "./Components/Services/services";
 
 
 export default function App() {
@@ -8,7 +9,7 @@ export default function App() {
     try {
       const saved = localStorage.getItem('theme')
       if (saved) return saved
-    } catch (e) {}
+    } catch {}
     return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
   })
 
@@ -26,6 +27,7 @@ export default function App() {
       <Navbar theme={theme} toggleTheme={toggleTheme} />
       <main>
         <Home />
+        <Services />
       </main>
     </>
   )
