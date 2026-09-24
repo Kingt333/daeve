@@ -249,3 +249,39 @@ html[data-theme="dark"] .navbar {
     .nav-actions { width: 100%; justify-content: space-between; padding: 0.4rem 0; }
     .order-now-button { padding: 0.5rem 0.95rem; }
 }
+
+/* Mobile full-width dropdown menu (separate from nav-links for predictability) */
+.mobile-menu {
+    display: none;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.02));
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 90;
+    overflow: hidden;
+    transform-origin: top center;
+    transition: transform 320ms cubic-bezier(.2,.9,.2,1), opacity 240ms ease;
+    opacity: 0;
+    transform: scaleY(0);
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    padding: 0.25rem 0;
+}
+.mobile-menu.open { transform: scaleY(1); opacity: 1; }
+.mobile-menu .mobile-link {
+    display: block;
+    padding: 0.8rem 1rem;
+    color: var(--text);
+    text-decoration: none;
+    border-top: 1px solid rgba(0,0,0,0.04);
+    background: transparent;
+}
+.mobile-menu .mobile-link:hover { background: rgba(0,0,0,0.04); }
+
+@media (max-width: 850px) {
+  .mobile-menu { display: flex; }
+  /* hide inline nav-links on very small screens to avoid duplication */
+  .nav-links { display: none !important; }
+}

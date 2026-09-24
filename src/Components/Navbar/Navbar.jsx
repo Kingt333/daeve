@@ -61,6 +61,13 @@ const Navbar = ({ theme, toggleTheme }) => {
           <img src={isDark ? lightModeIcon : darkModeIcon} alt="" className="theme-icon" />
         </button>
       </div>
+      {/* Mobile full-width dropdown menu for better reliability */}
+      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} aria-hidden={!menuOpen}>
+        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Home</a>
+        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>About</a>
+        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Services</a>
+        <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Contact</a>
+      </div>
     </header>
   )
 }
