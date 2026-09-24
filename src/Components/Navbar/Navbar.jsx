@@ -16,41 +16,24 @@ const Navbar = ({ theme, toggleTheme }) => {
         <span className="logo-text">Crispy</span>
       </div>
 
-      <button
-        className="menu-toggle"
-        aria-label="Toggle navigation"
-        aria-expanded={menuOpen}
-        onClick={toggleMenu}
-      >
-        <span className="hamburger" />
-      </button>
-
+      {/* Desktop Links */}
       <nav className="nav-links" aria-label="Main navigation">
-        <a className="nav-link " href="#" onClick={() => setMenuOpen(false)}>
-          <span>Home</span>
-        </a>
-        <a className="nav-link" href="#" onClick={() => setMenuOpen(false)}>
-          <span>About</span>
-        </a>
-        <a className="nav-link" href="#" onClick={() => setMenuOpen(false)}>
-          <span>Services</span>
-        </a>
-        <a className="nav-link" href="#" onClick={() => setMenuOpen(false)}>
-          <span>Contact</span>
-        </a>
+        <a className="nav-link active" href="#">Home</a>
+        <a className="nav-link" href="#">About</a>
+        <a className="nav-link" href="#">Services</a>
+        <a className="nav-link" href="#">Contact</a>
       </nav>
 
+      {/* Action Controls */}
       <div className="nav-actions">
         <label className="searchbar" aria-label="Search">
           <img src={searchIcon} alt="" className="search-icon" />
           <input type="text" placeholder="Search..." />
         </label>
 
-        <div className="order-button">
-          <button type="button" className="order-now-button">
-             Order Now
-          </button>
-        </div>
+        <button type="button" className="order-now-button">
+          Order Now
+        </button>
 
         <button
           type="button"
@@ -60,14 +43,24 @@ const Navbar = ({ theme, toggleTheme }) => {
         >
           <img src={isDark ? lightModeIcon : darkModeIcon} alt="" className="theme-icon" />
         </button>
+
+        <button
+          className="menu-toggle"
+          aria-label="Toggle navigation"
+          aria-expanded={menuOpen}
+          onClick={toggleMenu}
+        >
+          <span className="hamburger" />
+        </button>
       </div>
-      {/* Mobile full-width dropdown menu for better reliability */}
-      <div className={`mobile-menu ${menuOpen ? 'open' : ''}`} aria-hidden={!menuOpen}>
+
+      {/* Mobile Dropdown */}
+      <nav className={`mobile-menu ${menuOpen ? 'open' : ''}`} aria-label="Mobile navigation">
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Home</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>About</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Services</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Contact</a>
-      </div>
+      </nav>
     </header>
   )
 }
