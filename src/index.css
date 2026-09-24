@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair:ital,opsz,wght@0,5..1200,300..900;1,5..1200,300..900&family=Poppins:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
+.font-satisfy {
+    font-family: 'Satisfy', cursive;
+}
+
+:root {
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-display: 'Playfair Display', Georgia, serif;
+  --font-ui: 'Poppins', Helvetica, Arial, sans-serif;
+  --font-script: 'Satisfy', cursive;
+
+  --bg: #ffffff;            
+  --text: #1a1a1a;          
+  --muted: #666666;         
+  --search-bg: rgba(255, 255, 255, 0.15);     
+  --order-bg: #ff1e00;
+  --home-text: #ff3f05;
+  --link: rgba(255, 255, 255, 0.85);
+
+  --font: var(--font-script);
+  --font2: var(--font-display);
+  --font3: var(--font-ui);
+  --font4: var(--font-sans);
+}
+
+html[data-theme="dark"] {
+  --bg: #0b0b0d;
+  --text: #e6e6e6;
+  --muted: #9a9a9a;
+  --search-bg: rgba(21, 21, 25, 0.6);
+  --order-bg: #ff1e00;
+  --link: #cccccc;           
+}
+
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-sans);
+}
+
+html {
+  transition: background-color 200ms ease, color 200ms ease;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+}
+
+/* Navbar Component */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.85rem 2rem;
+  gap: 1.5rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100; 
+  background: rgba(0, 0, 0, 0.25);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  transition: background-color 200ms ease, border-color 200ms ease;
+}
+
+html[data-theme="dark"] .navbar {
+  background: rgba(11, 11, 13, 0.55);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.logo {
+  font-size: 1.75rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+   font-family: 'Satisfy', cursive;
+  color: var(--home-text);
+  text-decoration: none;
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--link); 
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.18s ease, opacity 0.18s ease;
+  font-family: var(--font3);
+}
+
+.nav-link:hover {
+  color: #ffffff;
+  opacity: 1;
+  cursor: pointer;
+}
+
+.nav-link.active {
+  font-weight: 700;
+  color: #ffffff;
+  border-bottom: 2px solid var(--order-bg);
+}
+
+.nav-icon,
+.search-icon,
+.theme-icon {
+  width: 20px;
+  height: 20px;
+  color: currentColor;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.searchbar {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--search-bg);
+  backdrop-filter: blur(8px);
+  border-radius: 999px;
+  padding: 0.4rem 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.searchbar:focus-within {
+  border-color: var(--order-bg);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.searchbar input {
+  border: none;
+  background: transparent;
+  color: #ffffff;
+  outline: none;
+  min-width: 140px;
+  font-family: var(--font3);
+  font-size: 0.9rem;
+}
+
+.searchbar input::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.85rem;
+}
+
+.theme-button {
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0.4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: background-color 0.2s ease;
+}
+
+.theme-button:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+}
+
+.order-now-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--order-bg);
+  border: none;
+  border-radius: 999px;
+  padding: 0.55rem 1.25rem;
+  cursor: pointer;
+  color: #ffffff;
+  font-weight: 600;
+  font-family: var(--font4);
+  font-size: 0.9rem;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.order-now-button:hover {
+  opacity: 0.92;
+  transform: translateY(-1px);
+}
+
+/* Mobile Responsive Adjustments */
+@media (max-width: 850px) {
+  .navbar {
+    padding: 0.8rem 1rem;
+    flex-wrap: wrap;
+  }
+  
+  .nav-links {
+    gap: 1rem;
+  }
+
+  .searchbar input {
+    min-width: 90px;
+  }
+}
