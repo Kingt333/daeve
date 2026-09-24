@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react'
 import './Home.css'
 
-// Import your hero images here
+// Import hero images
 import image1 from '../../assets/image.png'
 import image2 from '../../assets/nood.png'
 import image3 from '../../assets/pizza.png'
@@ -41,7 +41,15 @@ const slides = [
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
+  // 1. Preload all carousel images into browser cache immediately on mount
+  useEffect(() => {
+    slides.forEach((slide) => {
+      const img = new Image()
+      img.src = slide.image
+    })
+  }, [])
 
+  // 2. Auto-play interval (5 seconds per slide)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
