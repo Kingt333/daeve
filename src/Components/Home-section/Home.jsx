@@ -1,47 +1,42 @@
 import { useState, useEffect } from 'react'
 import './Home.css'
 
-// Import hero images
-import image1 from '../../assets/hero.png'
-import image2 from '../../assets/noodles.jpeg'
-import image3 from '../../assets/pizza.jpeg'
-import image4 from '../../assets/sandwich.jpeg'
-
+// Direct image URLs
 const slides = [
   {
     id: 1,
     tagline: 'Fresh & Crispy. Premium taste',
     title: 'Welcome to Crispy',
     sub: 'Freshly made, perfectly crispy. Taste the difference delivered fast.',
-    image: image1,
+    image: 'https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 2,
     tagline: 'Authentic Flavors',
     title: 'Savor Every Bite',
     sub: 'Handcrafted recipes prepared daily with fresh local ingredients.',
-    image: image2,
+    image: 'https://images.unsplash.com/photo-1612927601601-6638404737ce?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 3,
     tagline: 'Deliciously Crafted',
     title: 'Pizza Perfection',
     sub: 'Experience the art of pizza making with our signature recipes.',
-    image: image3,
+    image: 'https://images.unsplash.com/photo-1513104890138-7c749659a591?auto=format&fit=crop&w=1200&q=80',
   },
   {
     id: 4,
     tagline: 'Freshly Made, Just for You',
     title: 'Small Sandwiches, Big Flavor',
     sub: 'Our small sandwiches are packed with flavor and made fresh daily.',
-    image: image4,
+    image: 'https://images.unsplash.com/photo-1528735602780-2552fd46c7af?auto=format&fit=crop&w=1200&q=80',
   },
 ]
 
 const Home = () => {
   const [currentSlide, setCurrentSlide] = useState(0)
 
-  // 1. Preload all carousel images into browser cache immediately on mount
+  // Preload external images into memory
   useEffect(() => {
     slides.forEach((slide) => {
       const img = new Image()
@@ -49,7 +44,6 @@ const Home = () => {
     })
   }, [])
 
-  // 2. Auto-play interval (5 seconds per slide)
   useEffect(() => {
     const timer = setInterval(() => {
       setCurrentSlide((prev) => (prev + 1) % slides.length)
@@ -71,7 +65,7 @@ const Home = () => {
   return (
     <section className="home-hero" aria-label="Home">
 
-      {/* Slide layers for smooth crossfade */}
+      {/* Slide layers */}
       {slides.map((slide, index) => (
         <div
           key={slide.id}
@@ -96,7 +90,7 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Carousel Controls */}
+      {/* Controls */}
       <button className="carousel-arrow prev-arrow" onClick={prevSlide} aria-label="Previous Slide">
         &#10094;
       </button>
@@ -104,7 +98,7 @@ const Home = () => {
         &#10095;
       </button>
 
-      {/* Slide Indicators */}
+      {/* Indicators */}
       <div className="carousel-indicators">
         {slides.map((_, index) => (
           <button
