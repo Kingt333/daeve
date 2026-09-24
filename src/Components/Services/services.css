@@ -1,0 +1,73 @@
+.services-page {
+  padding: 1rem;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: space-between;
+  width: 100%;
+}
+
+.container {
+ font-family: var(--font2, 'Arial', sans-serif);
+  max-width: 1200px;
+}
+
+.container h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: var(--primary-color, #333);
+}
+
+.container h2 {
+  font-size: 2rem;
+  margin-bottom: 0.75rem;
+  color: var(--secondary-color, #555);
+}
+
+.gray {
+    color: #666666;
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.cat{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-top: 8rem;
+    padding-left: 1rem;
+    width: 15rem;
+    justify-content: bottom;
+    border: 1px solid #ccc;
+}
+
+.cat-link a {
+color: var(--home-text, #000);
+text-decoration: none;
+}
+
+.cat-link {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cat-link img {
+  width: 22px;
+  height: 22px;
+  display: inline-block;
+  transition: transform 180ms ease, background-color 180ms ease;
+  border-radius: 999px;
+  padding: 6px;
+  background: rgba(0,0,0,0.06);
+}
+
+.cat-link img:hover {
+  transform: translateX(6px) rotate(8deg);
+  background: var(--order-bg, #ff1e00);
+}
+
+/* Dark theme override to keep arrow visible */
+html[data-theme="dark"] .cat-link img {
+  background: rgba(255,255,255,0.06);
+}
