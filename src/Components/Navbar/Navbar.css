@@ -5,7 +5,7 @@
     --bg: #ffffff;            
     --text: #1a1a1a;          
     --muted: #666666;         
-    --search-bg: #f0f0f0;     
+    --search-bg: #232323;     
     --order-bg: #ff1e00;
     --home-text: #ff3f05;
     --link: #2f2e2e;
@@ -93,7 +93,7 @@ html[data-theme="dark"] .navbar {
 .theme-icon {
     width: 20px;
     height: 20px;
-    color: currentColor;
+    color: var(--search-bg);
 }
 
 .nav-actions {
@@ -131,6 +131,18 @@ html[data-theme="dark"] .navbar {
 }
 .menu-toggle .hamburger::before { top: -7px; }
 .menu-toggle .hamburger::after { top: 7px; }
+
+/* Icon contrast helpers: ensure visibility on light backgrounds */
+.search-icon,
+.theme-icon {
+    border-radius: 50%;
+    padding: 4px;
+    background: rgba(0,0,0,0.06);
+}
+.navbar.dark .search-icon,
+.navbar.dark .theme-icon {
+    background: rgba(255,255,255,0.06);
+}
 
 .searchbar {
     display: flex;
@@ -174,6 +186,7 @@ html[data-theme="dark"] .navbar {
     justify-content: center;
     border-radius: 50%;
     transition: background-color 0.2s ease;
+    color: var(--search-bg);
 }
 
 .theme-button:hover {
@@ -216,13 +229,21 @@ html[data-theme="dark"] .navbar {
         min-width: 90px;
     }
 
-    /* show menu toggle on small screens and hide nav links by default */
+    /* show menu toggle on small screens and make nav-links collapsible */
     .menu-toggle { display: flex; }
-    .nav-links { display: none; width: 100%; justify-content: space-around; padding: 0.5rem 0; }
-    .nav-links a { padding: 0.5rem 0.75rem; }
+    .nav-links { width: 100%; justify-content: space-around; padding: 0 0.25rem; overflow: hidden; max-height: 0; opacity: 0; display: flex; flex-direction: column; align-items: center; gap: 0; transition: max-height 300ms ease, opacity 250ms ease, gap 250ms ease; }
+    .nav-links a { padding: 0.6rem 0.75rem; }
 
-    /* When menu is open, reveal nav links stacked */
-    .navbar.open .nav-links { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+    /* When menu is open, reveal nav links stacked with animation */
+    .navbar.open .nav-links { max-height: 420px; opacity: 1; gap: 0.5rem; padding-top: 0.5rem; padding-bottom: 0.5rem; }
+
+    /* animate hamburger into X when open */
+    .menu-toggle .hamburger { transition: transform 220ms ease, background 220ms ease; }
+    .menu-toggle .hamburger::before,
+    .menu-toggle .hamburger::after { transition: transform 220ms ease, top 220ms ease, opacity 220ms ease; }
+    .navbar.open .menu-toggle .hamburger { background: transparent; }
+    .navbar.open .menu-toggle .hamburger::before { transform: rotate(45deg); top: 0; }
+    .navbar.open .menu-toggle .hamburger::after { transform: rotate(-45deg); top: 0; }
 
     /* Move actions into a second row and shrink search */
     .nav-actions { width: 100%; justify-content: space-between; padding: 0.4rem 0; }

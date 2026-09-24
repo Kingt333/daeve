@@ -228,6 +228,11 @@
   .indicator { width: 10px; height: 10px; }
 }
 
+/* Hide carousel arrows on small screens */
+@media (max-width: 780px) {
+  .carousel-arrow { display: none; }
+}
+
 /* Animations */
 @keyframes fadeUp {
   from { opacity: 0; transform: translateY(12px); }
