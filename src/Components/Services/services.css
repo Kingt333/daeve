@@ -34,7 +34,7 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1rem;
-    padding-top: 2.5rem;
+    padding-top: 8.5rem;
     padding-left: 1rem;
     width: 100%;
     justify-content: flex-end;
@@ -43,9 +43,10 @@
 }
 
 .cat-link a {
-color: var(--home-text, #000);
+color: var(--order-bg, #000);
 text-decoration: none;
-font-weight: 600;
+font-family: var(--font3, 'Arial', sans-serif);
+font-weight: 400;
 font-size: 1.05rem;
 line-height: 1;
 }
@@ -54,11 +55,8 @@ line-height: 1;
   display: inline-flex;
   align-items: center;
   gap: 0.6rem;
-  background: var(--order-bg, #ff1e00);
-  color: #fff;
+  color: VAR(--order-bg, #000);
   padding: 0.55rem 0.9rem;
-  border-radius: 999px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
 }
 
 .cat-link {
@@ -67,20 +65,19 @@ line-height: 1;
   gap: 0.5rem;
 }
 
-.cat-link img {
+.cat-link .arrow-icon {
   width: 26px;
   height: 26px;
   display: inline-block;
   transition: transform 180ms ease;
   margin-left: 2px;
-  filter: brightness(0) invert(1);
+  stroke: var(--order-bg, #ff1e00);
 }
 
 /* subtle hover motion while still visible by default */
-.cat-link:hover img {
+.cat-link:hover .arrow-icon {
   transform: translateX(6px) rotate(8deg);
 }
 
-/* Dark theme: ensure contrast */
+/* Dark theme: ensure contrast (arrow uses CSS variable) */
 html[data-theme="dark"] .cat-link { background: var(--order-bg, #ff1e00); color: #fff; }
-html[data-theme="dark"] .cat-link img { filter: none; }
