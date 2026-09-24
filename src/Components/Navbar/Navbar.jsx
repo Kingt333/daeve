@@ -56,6 +56,15 @@ const Navbar = ({ theme, toggleTheme }) => {
 
       {/* Mobile Dropdown */}
       <nav className={`mobile-menu ${menuOpen ? 'open' : ''}`} aria-label="Mobile navigation">
+        <label className="mobile-searchbar searchbar" aria-label="Mobile search">
+          <img src={searchIcon} alt="" className="search-icon" />
+          <input type="text" placeholder="Search..." />
+        </label>
+
+        <button className="order-now-button mobile-order" onClick={() => setMenuOpen(false)}>
+          Order Now
+        </button>
+
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Home</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>Services</a>
         <a className="mobile-link" href="#" onClick={() => setMenuOpen(false)}>About</a>

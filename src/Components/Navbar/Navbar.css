@@ -4,10 +4,10 @@
   justify-content: space-between;
   align-items: center;
   padding: 0.8rem 2rem;
-  position: absolute;
+  /* position: absolute;
   top: 0;
   left: 0;
-  right: 0;
+  right: 0; */
   z-index: 100;
   /* Dark overlay ensures header text & search controls stay clear over bright hero slides */
   background: rgba(0, 0, 0, 0.45);
@@ -209,6 +209,33 @@ html[data-theme="dark"] .navbar {
     border-bottom: 1px solid rgba(255, 255, 255, 0.08);
   }
 
+  /* Mobile-specific controls inside dropdown */
+  .mobile-searchbar {
+    width: 100%;
+    padding: 0.45rem 0.6rem;
+    margin-bottom: 0.5rem;
+    background-color: rgba(255,255,255,0.06);
+    border-radius: 999px;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid rgba(255,255,255,0.06);
+    display: flex;
+  }
+
+  .mobile-searchbar input { width: 100%; border: none; background: transparent; color: #fff; outline: none; }
+
+  .mobile-order {
+    width: 100%;
+    margin-bottom: 0.5rem;
+    padding: 0.6rem 0.75rem;
+    border-radius: 999px;
+    background: var(--order-bg, #ff1e00);
+    color: #fff;
+    border: none;
+    font-weight: 700;
+    font-size: 1rem;
+  }
+
   .order-now-button {
     padding: 0.45rem 0.85rem;
     font-size: 0.8rem;
@@ -217,11 +244,15 @@ html[data-theme="dark"] .navbar {
 
 @media (max-width: 520px) {
   .searchbar input {
-    display: none; /* Icon-only search on extra small screens */
+    display: none; 
   }
 
   .searchbar {
     padding: 0.45rem;
     border-radius: 50%;
+  }
+  .logo-text {
+    font-size: 1.75rem;
+    margin-right: 0.2rem;
   }
 }
