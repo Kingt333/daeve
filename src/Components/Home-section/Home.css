@@ -191,7 +191,7 @@
 @media (max-width: 1100px) {
   .hero-title { font-size: 2.8rem; }
   .hero-sub { font-size: 1.15rem; }
-  .hero-content { max-width: 50%; }
+  .hero-content { max-width: 60%; }
 }
 
 @media (max-width: 780px) {
@@ -216,6 +216,16 @@
     width: 100%; 
     max-width: 20rem; 
   }
+}
+
+/* Fluid type and spacing improvements for small devices */
+@media (max-width: 480px) {
+  .hero-title { font-size: 2.1rem; }
+  .hero-sub { font-size: 1rem; }
+  .hero-ctas { gap: 0.6rem; flex-direction: column; }
+  .btn { padding: 0.6rem 1rem; font-size: 0.95rem; }
+  .carousel-arrow { width: 36px; height: 36px; font-size: 1rem; }
+  .indicator { width: 10px; height: 10px; }
 }
 
 /* Animations */

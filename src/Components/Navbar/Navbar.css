@@ -102,6 +102,36 @@ html[data-theme="dark"] .navbar {
     gap: 1rem;
 }
 
+/* Mobile menu toggle */
+.menu-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.menu-toggle .hamburger {
+    display: block;
+    width: 22px;
+    height: 2px;
+    background: currentColor;
+    position: relative;
+}
+.menu-toggle .hamburger::before,
+.menu-toggle .hamburger::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 22px;
+    height: 2px;
+    background: currentColor;
+}
+.menu-toggle .hamburger::before { top: -7px; }
+.menu-toggle .hamburger::after { top: 7px; }
+
 .searchbar {
     display: flex;
     align-items: center;
@@ -185,4 +215,16 @@ html[data-theme="dark"] .navbar {
     .searchbar input {
         min-width: 90px;
     }
+
+    /* show menu toggle on small screens and hide nav links by default */
+    .menu-toggle { display: flex; }
+    .nav-links { display: none; width: 100%; justify-content: space-around; padding: 0.5rem 0; }
+    .nav-links a { padding: 0.5rem 0.75rem; }
+
+    /* When menu is open, reveal nav links stacked */
+    .navbar.open .nav-links { display: flex; flex-direction: column; align-items: center; gap: 0.5rem; }
+
+    /* Move actions into a second row and shrink search */
+    .nav-actions { width: 100%; justify-content: space-between; padding: 0.4rem 0; }
+    .order-now-button { padding: 0.5rem 0.95rem; }
 }
