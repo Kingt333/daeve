@@ -51,9 +51,9 @@ const Services = () => {
               />
             </div>
             <div className="card-content">
-              <h3>Wood-Fired Pizza</h3>
-              <p>Hand-tossed wood-fired pizzas made with fresh, locally-sourced ingredients and signature sauces.</p>
-              <button className="order-now-button">Order Pizza</button>
+              <h3>Classic Sandwiches</h3>
+              <p>Freshly made sandwiches with artisan bread, premium cold cuts, and crisp garden veggies.</p>
+              <button className="order-now-button">Order Sandwich</button>
             </div>
           </div>
 
@@ -65,8 +65,9 @@ const Services = () => {
               />
             </div>
             <div className="card-content">
-              <h3>Meal Prep & Catering</h3>
-              <p>Customized meal prep and catering for events — fresh, reliable, and made to order.</p>
+              <h3>Savory Noodles</h3>
+              <p>Warm noodle bowls with rich broths, house-made sauces, and fresh toppings for every taste.</p>
+              <button className="order-now-button">Order Noodles</button>
             </div>
           </div>
 
@@ -78,8 +79,9 @@ const Services = () => {
               />
             </div>
             <div className="card-content">
-              <h3>Grocery Delivery</h3>
-              <p>Quick grocery pickup and delivery with curated, fresh produce and pantry staples.</p>
+              <h3>Comfort Pasta</h3>
+              <p>Classic and creative pasta dishes tossed in flavorful sauces made from fresh ingredients.</p>
+              <button className="order-now-button">Order Pasta</button>
             </div>
           </div>
 
@@ -91,8 +93,9 @@ const Services = () => {
               />
             </div>
             <div className="card-content">
-              <h3>Express Delivery</h3>
-              <p>Same-day express delivery to your doorstep with real-time tracking and proof of delivery.</p>
+              <h3>Signature Burgers</h3>
+              <p>Juicy burgers grilled to order with house sauces, melty cheese, and hand-cut fries.</p>
+              <button className="order-now-button">Order Burger</button>
             </div>
           </div>
         </div>
