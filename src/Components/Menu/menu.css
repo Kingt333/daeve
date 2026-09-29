@@ -1,4 +1,4 @@
-.services-page {
+.menu-page {
   padding: 4rem 1.5rem;
   background-color: var(--bg, #f9f9fb);
   color: var(--text, #1a1a1a);
@@ -6,13 +6,13 @@
   width: 100%;
 }
 
-.services-container {
+.menu-container {
   max-width: 1200px;
   margin: 0 auto;
 }
 
 /* Header Section */
-.services-header {
+.menu-header {
   display: flex;
   justify-content: space-between;
   align-items: flex-end;
@@ -31,7 +31,7 @@
   text-transform: uppercase;
 }
 
-.services-title {
+.menu-title {
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 0.5rem;
@@ -39,7 +39,7 @@
   font-family: var(--font3, sans-serif);
 }
 
-.services-desc {
+.menu-desc {
   color: var(--muted, #666666);
   font-size: 0.95rem;
   line-height: 1.5;
@@ -73,14 +73,14 @@
 }
 
 /* Services Grid Layout */
-.services-grid {
+.menu-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 1.65rem;
 }
 
 /* Card Styling */
-.service-card {
+.menu-card {
   background-color: var(--bg, #ffffff);
   border-radius: 16px;
   overflow: hidden;
@@ -90,13 +90,13 @@
   flex-direction: column;
 }
 
-html[data-theme="dark"] .service-card {
+html[data-theme="dark"] .menu-card {
   background-color: var(--search-bg, #1c1c1f);
   border: 1px solid rgba(255, 255, 255, 0.08);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
-.service-card:hover {
+.menu-grid:hover {
   transform: translateY(-6px);
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
   border-color: rgba(255, 30, 0, 0.2);
@@ -117,7 +117,7 @@ html[data-theme="dark"] .service-card {
   transition: transform 400ms ease;
 }
 
-.service-card:hover .card-image-wrapper img {
+.menu-card:hover .card-image-wrapper img {
   transform: scale(1.05);
 }
 
@@ -145,32 +145,32 @@ html[data-theme="dark"] .service-card {
 
 /* Mobile Adjustments */
 @media (max-width: 640px) {
-  .services-page {
+  .menu-page {
     padding: 2.5rem 1rem;
   }
 
-  .services-header {
+  .menu-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
   }
 
-  .services-title {
+  .menu-title {
     font-size: 1.8rem;
   }
 }
 
 /* Large screens and wide monitors */
 @media (min-width: 1280px) {
-  .services-container { max-width: 1400px; }
+  .menu-container { max-width: 1400px; }
 
-  .services-header {
+  .menu-header {
     align-items: center;
     gap: 2.5rem;
   }
 
   /* Make the grid more spacious on wide screens */
-  .services-grid {
+  .menu-grid {
     grid-template-columns: repeat(4, 1fr);
     gap: 2.25rem;
   }
@@ -186,8 +186,8 @@ html[data-theme="dark"] .service-card {
 
 /* Ultra-wide monitor adjustments */
 @media (min-width: 1700px) {
-  .services-container { max-width: 1600px; }
-  .services-page { padding-left: 6rem; padding-right: 6rem; }
-  .services-grid { gap: 2.75rem; }
+  .menu-container { max-width: 1600px; }
+  .menu-page { padding-left: 6rem; padding-right: 6rem; }
+  .menu-grid { gap: 2.75rem; }
   .card-image-wrapper { height: 380px; }
 }

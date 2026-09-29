@@ -2,15 +2,15 @@ import './menu.css'
 
 const Services = () => {
   return (
-    <section id="services" className="services-page">
-      <div className="services-container">
+    <section id="menu" className="menu-page">
+      <div className="menu-container">
         
         {/* Header section with text on left, category link on right */}
-        <div className="services-header">
+        <div className="menu-header">
           <div className="header-text">
             <span className="section-badge">POPULAR CATEGORIES</span>
-            <h1 className="services-title">Our Menu</h1>
-            <p className="services-desc">
+            <h1 className="menu-title">Our Menu</h1>
+            <p className="menu-desc">
               Explore our most popular m categories designed to meet your needs.
               <br />
               Fast and reliable service.
@@ -18,7 +18,7 @@ const Services = () => {
           </div>
 
           <div className="cat">
-            <a href="#" className="cat-link">
+            <a href="#categories" className="cat-link">
               <span>View all categories</span>
               <svg
                 className="arrow-icon"
@@ -42,8 +42,8 @@ const Services = () => {
         </div>
 
         {/* Responsive Grid for Service Cards */}
-        <div className="services-grid">
-          <div className="service-card">
+        <div className="menu-grid">
+          <div className="menu-card">
             <div className="card-image-wrapper">
               <img
                 src="https://images.unsplash.com/photo-1539252554453-80ab65ce3586?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -57,7 +57,7 @@ const Services = () => {
             </div>
           </div>
 
-          <div className="service-card">
+          <div className="menu-card">
             <div className="card-image-wrapper">
               <img
                 src="https://images.unsplash.com/photo-1612929633738-8fe44f7ec841?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -71,7 +71,7 @@ const Services = () => {
             </div>
           </div>
 
-          <div className="service-card">
+          <div className="menu-card">
             <div className="card-image-wrapper">
               <img
                 src="https://images.unsplash.com/photo-1627042633145-b780d842ba45?q=80&w=387&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
@@ -85,7 +85,7 @@ const Services = () => {
             </div>
           </div>
 
-          <div className="service-card">
+          <div className="menu-card">
             <div className="card-image-wrapper">
               <img
                 src="https://images.unsplash.com/photo-1593504049359-74330189a345?q=80&w=327&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"

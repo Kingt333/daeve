@@ -11,6 +11,7 @@
   border-bottom: 1px solid rgba(255, 255, 255, 0.12);
   color: #ffffff;
   transition: background-color 300ms ease;
+  position: fixed;
 }
 
 html[data-theme="dark"] .navbar {

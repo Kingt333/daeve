@@ -7,8 +7,14 @@ import './Navbar.css'
 const Navbar = ({ theme, toggleTheme }) => {
   const isDark = theme === 'dark'
   const [menuOpen, setMenuOpen] = useState(false)
+  const [activeLink, setActiveLink] = useState('#home')
 
   const toggleMenu = () => setMenuOpen((v) => !v)
+
+  const handleNavClick = (href) => {
+    setActiveLink(href)
+    setMenuOpen(false)
+  }
 
   return (
     <header className={`navbar ${isDark ? 'dark' : 'light'} ${menuOpen ? 'open' : ''}`}>
@@ -18,10 +24,34 @@ const Navbar = ({ theme, toggleTheme }) => {
 
       {/* Desktop Navigation Links */}
       <nav className="nav-links" aria-label="Main navigation">
-        <a className="nav-link active" href="#home">Home</a>
-        <a className="nav-link" href="#menu">Menu</a>
-        <a className="nav-link" href="#about">About</a>
-        <a className="nav-link" href="#contact">Contact</a>
+        <a
+          className={`nav-link ${activeLink === '#home' ? 'active' : ''}`}
+          href="#home"
+          onClick={() => handleNavClick('#home')}
+        >
+          Home
+        </a>
+        <a
+          className={`nav-link ${activeLink === '#menu' ? 'active' : ''}`}
+          href="#menu"
+          onClick={() => handleNavClick('#menu')}
+        >
+          Menu
+        </a>
+        <a
+          className={`nav-link ${activeLink === '#about' ? 'active' : ''}`}
+          href="#about"
+          onClick={() => handleNavClick('#about')}
+        >
+          About
+        </a>
+        <a
+          className={`nav-link ${activeLink === '#contact' ? 'active' : ''}`}
+          href="#contact"
+          onClick={() => handleNavClick('#contact')}
+        >
+          Contact
+        </a>
       </nav>
 
       {/* Action Controls */}
@@ -37,7 +67,7 @@ const Navbar = ({ theme, toggleTheme }) => {
           Order Now
         </button>
 
-        {/* Theme Toggle Button (Stays visible in header) */}
+        {/* Theme Toggle Button */}
         <button
           type="button"
           className="theme-button"
@@ -66,11 +96,35 @@ const Navbar = ({ theme, toggleTheme }) => {
           <input type="text" placeholder="Search..." />
         </label>
 
-        {/* Navigation Links */}
-        <a className="mobile-link" href="#home" onClick={() => setMenuOpen(false)}>Home</a>
-        <a className="mobile-link" href="#menu" onClick={() => setMenuOpen(false)}>Menu</a>
-        <a className="mobile-link" href="#about" onClick={() => setMenuOpen(false)}>About</a>
-        <a className="mobile-link" href="#contact" onClick={() => setMenuOpen(false)}>Contact</a>
+        {/* Mobile Navigation Links */}
+        <a
+          className={`mobile-link ${activeLink === '#home' ? 'active' : ''}`}
+          href="#home"
+          onClick={() => handleNavClick('#home')}
+        >
+          Home
+        </a>
+        <a
+          className={`mobile-link ${activeLink === '#menu' ? 'active' : ''}`}
+          href="#menu"
+          onClick={() => handleNavClick('#menu')}
+        >
+          Menu
+        </a>
+        <a
+          className={`mobile-link ${activeLink === '#about' ? 'active' : ''}`}
+          href="#about"
+          onClick={() => handleNavClick('#about')}
+        >
+          About
+        </a>
+        <a
+          className={`mobile-link ${activeLink === '#contact' ? 'active' : ''}`}
+          href="#contact"
+          onClick={() => handleNavClick('#contact')}
+        >
+          Contact
+        </a>
 
         {/* Mobile Order Button */}
         <button type="button" className="order-now-button mobile-order-btn">

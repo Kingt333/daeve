@@ -40,8 +40,10 @@ html[data-theme="dark"] {
   font-family: var(--font-sans);
 }
 
+
 html {
   transition: background-color 200ms ease, color 200ms ease;
+  scroll-behavior: smooth;
 }
 
 body {
